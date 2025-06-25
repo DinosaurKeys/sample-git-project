@@ -20,7 +20,7 @@ jobs:
 
         # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
         #Setup Terraform environment
       - name: Setup Terraform
@@ -45,5 +45,6 @@ jobs:
 
       - name: Terraform Apply
         id: apply
-        working-directory: ./terraform-VPC
         run: terraform apply -auto-approve
+        working-directory: ./terraform-VPC
+       
